@@ -9,9 +9,11 @@
             </a>
             <div class="text-base text-gray-500">
                 By
-                <a href="/authors/{{ $post->author->id }}" class="hover:underline">{{ $post->author->name }}</a>
+                <a href="/authors/{{ $post->author->username }}"
+                    class="hover:underline text-black">{{ $post->author->name }}</a>
                 in
-                <a href="#" class="hover:underline">Linux</a>
+                <a href="/categories/{{ $post->category->slug }}"
+                    class="hover:underline text-black">{{ $post->category->name }}</a> |
                 {{ $post->created_at->diffForHumans() }}
             </div>
             <p class="my-4 font-light">{{ Str::limit($post['body'], 200) }}</p>
