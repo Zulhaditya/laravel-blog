@@ -2,9 +2,10 @@
     <x-slot:title>{{ $title }}</x-slot:title>
 
     @foreach ($posts as $post)
-        <article class="py-8 max-w-screen-md border-b border-gray-300">
+        <article class="py-8 max-w-screen-md border-b border-gray-300 mx-auto">
             <a href="/posts/{{ $post['slug'] }}">
-                <h2 class="mb-1 hover:underline text-3xl tracking-tight font-bold text-gray-900">{{ $post['title'] }}
+                <h2 class="mb-1 hover:underline text-3xl tracking-tight font-bold text-gray-900">
+                    {{ $post['title'] }}
                 </h2>
             </a>
             <div class="text-base text-gray-500">
